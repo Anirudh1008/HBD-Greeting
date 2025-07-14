@@ -1,0 +1,311 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Kalam:wght@400;700&family=Caveat:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.font-script {
+  font-family: 'Dancing Script', cursive;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-birthday-special {
+  font-family: 'Fredoka One', cursive;
+  text-shadow: 
+    2px 2px 4px rgba(0,0,0,0.1),
+    0 0 10px rgba(236, 72, 153, 0.3),
+    0 0 20px rgba(147, 51, 234, 0.2);
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+  letter-spacing: 0.05em;
+}
+/* Custom Border Colors */
+.border-gold {
+  border-color: #fbbf24;
+}
+
+.border-l-3 {
+  border-left-width: 3px;
+}
+
+.border-r-3 {
+  border-right-width: 3px;
+}
+
+.border-t-3 {
+  border-top-width: 3px;
+}
+
+.border-b-3 {
+  border-bottom-width: 3px;
+}
+
+/* Enhanced Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes float-hearts {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.2;
+  }
+  50% { 
+    transform: translateY(-30px) rotate(180deg);
+    opacity: 0.6;
+  }
+}
+
+@keyframes float-orbs {
+  0%, 100% { 
+    transform: translateY(0px) translateX(0px) scale(1);
+    opacity: 0.3;
+  }
+  33% { 
+    transform: translateY(-40px) translateX(20px) scale(1.2);
+    opacity: 0.6;
+  }
+  66% { 
+    transform: translateY(-20px) translateX(-15px) scale(0.8);
+    opacity: 0.4;
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.1); }
+  50% { transform: scale(1.05); }
+  75% { transform: scale(1.15); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.1); }
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes bounce-gentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes sparkle {
+  0%, 100% { 
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  50% { 
+    opacity: 1;
+    transform: scale(1) rotate(180deg);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.5); }
+}
+
+@keyframes card-slide-out {
+  0% { 
+    transform: translateY(50px) rotate(0deg);
+    opacity: 0;
+  }
+  100% { 
+    transform: translateY(-20px) rotate(2deg);
+    opacity: 1;
+  }
+}
+
+@keyframes text-glow {
+  0%, 100% { 
+    text-shadow: 
+      2px 2px 4px rgba(0,0,0,0.1),
+      0 0 10px rgba(236, 72, 153, 0.3),
+      0 0 20px rgba(147, 51, 234, 0.2);
+    transform: scale(1);
+  }
+  50% { 
+    text-shadow: 
+      2px 2px 4px rgba(0,0,0,0.1),
+      0 0 20px rgba(236, 72, 153, 0.6), 
+      0 0 30px rgba(147, 51, 234, 0.4),
+      0 0 40px rgba(168, 85, 247, 0.3);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  0% { 
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% { 
+    opacity: 0;
+    transform: translateY(80px) scale(0.8) rotate(-5deg);
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+}
+
+/* Animation Classes */
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-hearts {
+  animation: float-hearts 6s ease-in-out infinite;
+}
+
+.animate-float-orbs {
+  animation: float-orbs 10s ease-in-out infinite;
+}
+
+.animate-heartbeat {
+  animation: heartbeat 2s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
+}
+
+.animate-bounce-gentle {
+  animation: bounce-gentle 1s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.animate-twinkle {
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+.animate-card-slide-out {
+  animation: card-slide-out 1s ease-out forwards;
+}
+
+.animate-text-glow {
+  animation: text-glow 2s ease-in-out infinite;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1.5s ease-out;
+}
+
+.animate-slideUp {
+  animation: slideUp 1s ease-out both;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease-out both;
+}
+
+/* 3D Effects */
+.transform-gpu {
+  transform: translateZ(0);
+}
+
+/* Envelope 3D Effect */
+.envelope-3d {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .animate-card-slide-out {
+    animation: card-slide-out 1.2s ease-out forwards;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+/* Glowing Effects */
+.glow-pink {
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.3);
+}
+
+.glow-purple {
+  box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
+}
+
+/* Photo Frame Vintage Effect */
+.vintage-frame {
+  position: relative;
+}
+
+.vintage-frame::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #fbbf24, #f59e0b, #d97706, #92400e);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+/* Music Note Animation */
+@keyframes music-note {
+  0% { transform: translateY(0px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+}
+
+.animate-music-note {
+  animation: music-note 3s ease-out infinite;
+}
